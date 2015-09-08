@@ -22,7 +22,8 @@ public class MessagerLogger implements Logger {
 
 	@Override
 	public void info(String message) {
-		messager.printMessage(Kind.NOTE, message, element);
+		// Android Studio is considering these errors for some dumb reason...
+		//messager.printMessage(Kind.NOTE, message, element);
 	}
 
 	@Override

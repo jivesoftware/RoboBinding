@@ -245,7 +245,7 @@ uploadArchives {
 		mavenDeployer {
 			beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
 			
-			repository(url: 'https://oss.sonatype.org/service/local/staging/deploy/maven2/') {
+			repository(url: 'http://nexus-int.eng.jiveland.com/content/repositories/modified-thirdparty/') {
 				authentication(userName: getRepositoryUsername(), password: getRepositoryPassword())
 			}
 			
