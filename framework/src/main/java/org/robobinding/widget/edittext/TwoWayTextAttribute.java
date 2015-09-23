@@ -55,6 +55,9 @@ public class TwoWayTextAttribute implements TwoWayMultiTypePropertyViewAttribute
 		@Override
 		public void updateView(EditText view, PropertyType newValue, ViewAddOn viewAddOn) {
 			view.setText(newValue);
+			if (newValue != null) {
+				view.setSelection(newValue.length()); // Set the cursor at the end
+			}
 		}
 
 		@Override
